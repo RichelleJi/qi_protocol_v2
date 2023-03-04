@@ -4,6 +4,7 @@ import { Web3Provider } from 'providers/Web3'
 import { ChakraProvider } from 'providers/Chakra'
 import { useIsMounted } from 'hooks/useIsMounted'
 import { Seo } from 'components/layout/Seo'
+// import theme from '../theme/theme'
 
 export default function App({ Component, pageProps }: AppProps) {
   const isMounted = useIsMounted()

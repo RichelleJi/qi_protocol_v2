@@ -13,7 +13,7 @@ export default function Home() {
   useEffect(() => {
     const { pathname } = Router
     if (address != null) {
-      Router.push('/examples')
+      Router.push('/dashboard')
     }
   })
 

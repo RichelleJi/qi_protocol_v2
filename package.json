@@ -1,5 +1,5 @@
 {
-  "name": "Qi Protocol",
+  "name": "Qi_Protocol",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -25,8 +25,9 @@
   "dependencies": {
     "@chakra-ui/icons": "2.0.14",
     "@chakra-ui/react": "2.4.4",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.11",
     "@next/font": "13.1.1",
     "@wagmi/chains": "^0.1.7",
     "connectkit": "^1.1.1",
