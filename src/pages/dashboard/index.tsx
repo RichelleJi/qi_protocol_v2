@@ -54,7 +54,7 @@ export default function Home() {
           />
           <StatsCard
             top_data={{ title: 'Collaterization ratio', unit: 'Percent', amount: '170%', percent: '9.05%' }}
-            bottom_data={{ title: 'Stability fee', percent: '6.000%' }}
+            bottom_data={{ title: 'Redemption fee', percent: '6.000%' }}
           />
         </Flex>
         <Flex minWidth="max-content" alignItems="center" gap="4">
