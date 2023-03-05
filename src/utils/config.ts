@@ -11,10 +11,10 @@ export const THEME_CONFIG = {
   initialColorMode: THEME_INITIAL_COLOR,
 }
 
-export const SOCIAL_TWITTER = 'wslyvh'
-export const SOCIAL_GITHUB = 'wslyvh/nexth'
+export const SOCIAL_TWITTER = 'qi_protocol'
+export const SOCIAL_GITHUB = 'RichelleJi/qi_protocol_v2'
 
-export const ETH_CHAINS = [mainnet, goerli, sepolia, polygon, optimism, arbitrum]
+export const ETH_CHAINS = [mainnet, goerli, sepolia, polygon, optimism, arbitrum, sepolia]
 
 export const SERVER_SESSION_SETTINGS = {
   cookieName: SITE_NAME,

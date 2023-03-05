@@ -50,7 +50,7 @@ export default function Home() {
         <Flex minWidth="max-content" alignItems="center" gap="4">
           <StatsCard
             top_data={{ title: 'Liquidatioin Price', unit: 'ETH/USD', amount: '345,670', percent: '9.05%'}}
-            bottom_data={{ title: 'Liquidity Penalty', percent: '13.000%' }}
+            bottom_data={{ title: 'Liquidity Penalty', perent: '13.000%' }}
           />
           <StatsCard
             top_data={{ title: 'Collaterization ratio', unit: 'Percent', amount: '170%', percent: '9.05%' }}

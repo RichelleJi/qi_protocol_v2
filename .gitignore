@@ -46,3 +46,6 @@ contracts/typechain-types
 
 contracts/cache
 contracts/artifacts
+
+src/utils/secret.ts
+
