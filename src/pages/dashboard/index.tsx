@@ -33,6 +33,13 @@ import ActionCard from '../../components/actionCard'
 
 export default function Home() {
   const { address, isConnecting, isDisconnected } = useAccount()
+    useEffect(() => {
+    const { pathname } = Router
+    if (isDisconnected) {
+      Router.push('/')
+    }
+  })
+
 
   return (
     <>
@@ -42,7 +49,7 @@ export default function Home() {
         <Text mb={10}></Text>
         <Flex minWidth="max-content" alignItems="center" gap="4">
           <StatsCard
-            top_data={{ title: 'Liquidatioin Price', unit: 'ETH/USD', amount: '345,670', percent: '9.05%' }}
+            top_data={{ title: 'Liquidatioin Price', unit: 'ETH/USD', amount: '345,670', percent: '9.05%'}}
             bottom_data={{ title: 'Liquidity Penalty', percent: '13.000%' }}
           />
           <StatsCard
@@ -52,12 +59,12 @@ export default function Home() {
         </Flex>
         <Flex minWidth="max-content" alignItems="center" gap="4">
           <ActionCard
-            top_action={{ title: 'ETH locked', amount: '100 Ξ', action: 'Deposit' }}
-            bottom_action={{ title: 'Able to withdraw', amount: '100 Ξ', action: 'Withdraw' }}
+            top_action={{ title: 'ETH locked', amount: '100 Ξ', action: 'Deposit', link: '/actions/deposit' }}
+            bottom_action={{ title: 'Able to withdraw', amount: '100 Ξ', action: 'Withdraw', link: '/actions/withdraw-collateral'}}
           />
           <ActionCard
-            top_action={{ title: 'Outstanding Qi token debt', amount: '100 ʠ', action: 'Pay back' }}
-            bottom_action={{ title: 'Availabile to generate', amount: '100 ʠ', action: 'Generate' }}
+            top_action={{ title: 'Payback Qi token debt', amount: '∞', action: 'Pay back', link: '/actions/pay-debt' }}
+            bottom_action={{ title: 'Availabile to generate', amount: '100 ʠ', action: 'Generate', link: '/actions/generate-qi' }}
           />
         </Flex>
       </main>

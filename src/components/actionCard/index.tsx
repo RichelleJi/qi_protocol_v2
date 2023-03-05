@@ -14,9 +14,11 @@ import {
   StatLabel,
   StatNumber,
   Text,
-  Button
+  Button,
+  Tag,
 } from '@chakra-ui/react'
 import React from 'react'
+import Link from 'next/link'
 
 export default function ActionCard({ top_action, bottom_action }) {
   return (
@@ -24,10 +26,10 @@ export default function ActionCard({ top_action, bottom_action }) {
       <Heading as="h5" size="sm" mb={3}>
         {top_action.title}
       </Heading>
-      <Card w="450px" h="170">
+      <Card w="450px" h="180">
         <CardBody>
           <Stack divider={<StackDivider />} spacing="1">
-            <Box mb={3}>
+            <Box mb={4}>
               <Flex>
                 <StatGroup>
                   <Stat display="flex">
@@ -36,12 +38,14 @@ export default function ActionCard({ top_action, bottom_action }) {
                   </Stat>
                 </StatGroup>
                 <Spacer />
-                <Button colorScheme='teal' w="120px" h="50px" size="lg" lineHeight="50">
-                  {top_action.action}
-                </Button>
+                <Link href={`${top_action.link}`}>
+                  <Button colorScheme="teal" w="120px" h="50px" size="lg">
+                    {top_action.action}
+                  </Button>
+                </Link>
               </Flex>
             </Box>
-            <Box>
+            <Box mt={4}>
               <Flex>
                 <StatGroup>
                   <Stat display="flex">
@@ -50,9 +54,11 @@ export default function ActionCard({ top_action, bottom_action }) {
                   </Stat>
                 </StatGroup>
                 <Spacer />
-                <Button colorScheme='teal' w="120px" h="50px" lineHeight="50" size="lg" >
-                  {bottom_action.action}
-                </Button>
+                <Link href={`${bottom_action.link}`}>
+                  <Button colorScheme="teal" w="120px" h="50px" size="lg">
+                    {bottom_action.action}
+                  </Button>
+                </Link>
               </Flex>
             </Box>
           </Stack>
