@@ -1,4 +1,23 @@
-import { Stat, StatLabel, StatNumber, StatHelpText, StatArrow, StatGroup, Stack, HStack, VStack, Card, CardBody, CardFooter, Wrap, SimpleGrid, Flex } from '@chakra-ui/react'
+import {
+  Stat,
+  StatLabel,
+  StatNumber,
+  StatHelpText,
+  StatArrow,
+  StackDivider,
+  StatGroup,
+  Stack,
+  HStack,
+  VStack,
+  Card,
+  CardBody,
+  CardFooter,
+  Wrap,
+  SimpleGrid,
+  Flex,
+  Box,
+  Spacer,
+} from '@chakra-ui/react'
 import { Heading } from '@chakra-ui/react'
 import { Text } from '@chakra-ui/react'
 import { Head } from 'components/layout/Head'
@@ -9,6 +28,8 @@ import { useAccount } from 'wagmi'
 import Router from 'next/router'
 import React, { useEffect } from 'react'
 import Stats from '../../components/stats'
+import StatsCard from '../../components/statsCard'
+import ActionCard from '../../components/actionCard'
 
 export default function Home() {
   const { address, isConnecting, isDisconnected } = useAccount()
@@ -17,43 +38,27 @@ export default function Home() {
     <>
       <Head />
       <main>
-        <HeadingComponent as="h2">Your Position</HeadingComponent>
-        <Stats></Stats>
-        <Flex align="center" justify="center" mb={30}>
-          <div>
-            <Heading as='h5' size='sm' mb={3}>Liquidatioin Price</Heading>
-            <Card w='450px' h='200' mr={20}>
-              <CardBody>
-                <Text></Text>
-              </CardBody>
-            </Card>
-          </div>
-          <div>
-            <Heading as='h5' size='sm' mb={3}>Collaterization ratio</Heading>
-            <Card w='450px' h='200'>
-              <CardBody>
-                <Text></Text>
-              </CardBody>
-            </Card>
-          </div>
+        <HeadingComponent as="h2" >Your Position</HeadingComponent>
+        <Text mb={10}></Text>
+        <Flex minWidth="max-content" alignItems="center" gap="4">
+          <StatsCard
+            top_data={{ title: 'Liquidatioin Price', unit: 'ETH/USD', amount: '345,670', percent: '9.05%' }}
+            bottom_data={{ title: 'Liquidity Penalty', percent: '13.000%' }}
+          />
+          <StatsCard
+            top_data={{ title: 'Collaterization ratio', unit: 'Percent', amount: '170%', percent: '9.05%' }}
+            bottom_data={{ title: 'Stability fee', percent: '6.000%' }}
+          />
         </Flex>
-        <Flex align="center" justify="center" mb={30}>
-          <div>
-            <Heading as='h5' size='sm' mb={3}>ETH Locked</Heading>
-            <Card w='450px' h='200' mr={20}>
-              <CardBody>
-                <Text></Text>
-              </CardBody>
-            </Card>
-          </div>
-          <div>
-            <Heading as='h5' size='sm' mb={3}>Outstanding </Heading>
-            <Card w='450px' h='200'>
-              <CardBody>
-                <Text></Text>
-              </CardBody>
-            </Card>
-          </div>
+        <Flex minWidth="max-content" alignItems="center" gap="4">
+          <ActionCard
+            top_action={{ title: 'ETH locked', amount: '100 Ξ', action: 'Deposit' }}
+            bottom_action={{ title: 'Able to withdraw', amount: '100 Ξ', action: 'Withdraw' }}
+          />
+          <ActionCard
+            top_action={{ title: 'Outstanding Qi token debt', amount: '100 ʠ', action: 'Pay back' }}
+            bottom_action={{ title: 'Availabile to generate', amount: '100 ʠ', action: 'Generate' }}
+          />
         </Flex>
       </main>
     </>
