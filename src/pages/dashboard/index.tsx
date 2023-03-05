@@ -40,16 +40,15 @@ export default function Home() {
     }
   })
 
-
   return (
     <>
       <Head />
       <main>
-        <HeadingComponent as="h2" >Your Position</HeadingComponent>
+        <HeadingComponent as="h2">Your Position</HeadingComponent>
         <Text mb={10}></Text>
         <Flex minWidth="max-content" alignItems="center" gap="4">
           <StatsCard
-            top_data={{ title: 'Liquidatioin Price', unit: 'ETH/USD', amount: '345,670', percent: '9.05%'}}
+            top_data={{ title: 'Liquidatioin Price', unit: 'ETH/USD', amount: '345,670', percent: '9.05%' }}
             bottom_data={{ title: 'Liquidity Penalty', perent: '13.000%' }}
           />
           <StatsCard
@@ -60,7 +59,7 @@ export default function Home() {
         <Flex minWidth="max-content" alignItems="center" gap="4">
           <ActionCard
             top_action={{ title: 'ETH locked', amount: '100 Ξ', action: 'Deposit', link: '/actions/deposit' }}
-            bottom_action={{ title: 'Able to withdraw', amount: '100 Ξ', action: 'Withdraw', link: '/actions/withdraw-collateral'}}
+            bottom_action={{ title: 'Able to withdraw', amount: '100 Ξ', action: 'Withdraw', link: '/actions/withdraw-collateral' }}
           />
           <ActionCard
             top_action={{ title: 'Payback Qi token debt', amount: '∞', action: 'Pay back', link: '/actions/pay-debt' }}

@@ -27,8 +27,8 @@ export default function StatsCard({ top_data, bottom_data }) {
         <CardBody>
           <Stack divider={<StackDivider />} spacing="1">
             <Box>
-              <StatGroup >
-                <Stat display="flex" >
+              <StatGroup>
+                <Stat display="flex">
                   <StatLabel>{top_data.unit}</StatLabel>
                   <StatNumber>{top_data.amount}</StatNumber>
                   <StatHelpText>

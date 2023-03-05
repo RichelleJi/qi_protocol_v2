@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo'
 import { utils } from 'ethers'
 import { LinkComponent } from 'components/layout/LinkComponent'
 import { useDebounce } from 'usehooks-ts'
-import Link from "next/link";
+import Link from 'next/link'
 
 function WithdrawCollateral() {
   const [tokenContract, setTokenContract] = useState('')
@@ -39,7 +39,6 @@ function WithdrawCollateral() {
 
   return (
     <div>
-
       <FormControl>
         <FormLabel>Token Contract</FormLabel>
         <Input value={tokenContract} onChange={(e) => setTokenContract(e.target.value)} placeholder="0xA0Cf…251e" />
@@ -56,7 +55,11 @@ function WithdrawCollateral() {
         </Text>
         <Flex gap="2">
           <Button
-            colorScheme="teal" w="120px" h="50px" lineHeight="50" size="lg"
+            colorScheme="teal"
+            w="120px"
+            h="50px"
+            lineHeight="50"
+            size="lg"
             disabled={waitForTransaction.isLoading || contractWrite.isLoading || !contractWrite.write || !to || !amount}
             mt={4}
             onClick={handleSendTransation}>

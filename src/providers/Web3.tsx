@@ -10,10 +10,7 @@ interface Props {
   children: ReactNode
 }
 
-const { provider, webSocketProvider } = configureChains(
-  ETH_CHAINS,
-  [infuraProvider({ apiKey: INFRA_API_KEY })]
-)
+const { provider, webSocketProvider } = configureChains(ETH_CHAINS, [infuraProvider({ apiKey: INFRA_API_KEY })])
 
 const client = createClient(
   getDefaultClient({

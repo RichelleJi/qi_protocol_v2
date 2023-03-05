@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo'
 import { utils } from 'ethers'
 import { LinkComponent } from 'components/layout/LinkComponent'
 import { useDebounce } from 'usehooks-ts'
-import Link from "next/link";
+import Link from 'next/link'
 
 function Desposit() {
   const [tokenContract, setTokenContract] = useState('')
@@ -55,7 +55,11 @@ function Desposit() {
         </Text>
         <Flex gap="2">
           <Button
-            colorScheme="teal" w="120px" h="50px" lineHeight="50" size="lg"
+            colorScheme="teal"
+            w="120px"
+            h="50px"
+            lineHeight="50"
+            size="lg"
             disabled={waitForTransaction.isLoading || contractWrite.isLoading || !contractWrite.write || !to || !amount}
             mt={4}
             onClick={handleSendTransation}>

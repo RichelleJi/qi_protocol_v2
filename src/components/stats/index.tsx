@@ -1,5 +1,5 @@
-import {Stat, StatArrow, StatGroup, StatHelpText, StatLabel, StatNumber} from "@chakra-ui/react";
-import React from "react";
+import { Stat, StatArrow, StatGroup, StatHelpText, StatLabel, StatNumber } from '@chakra-ui/react'
+import React from 'react'
 
 export default function Stats() {
   return (
