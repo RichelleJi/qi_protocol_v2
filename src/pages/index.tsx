@@ -17,6 +17,13 @@ export default function Home() {
     }
   })
 
+  window.Cypher({
+    address: address,
+    targetChainIdHex: '0x5', // Eth - Goreli
+    requiredTokenBalance: 65,
+    isTestnet: true,
+    callBack: () => { console.log('callBack called'); }
+  });
   return (
     <>
       <Head />
